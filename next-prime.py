@@ -18,5 +18,5 @@ def next_prime(n):
         candidate += 1
 
 # Example usage:
-num = 19
+num = 1
 print("Next prime after", num, "is", next_prime(num))
