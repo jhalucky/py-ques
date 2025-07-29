@@ -1,8 +1,12 @@
+# User function Template for python3
+# Back-end complete function Template for Python 3
+
 a = int(input())
 b = int(input())
 
-# Your code here
-lcm = 1
-for i in range(1,a+1):
-    if a % i == 0 and b % i == 0:
-        lcm *= i
+########### Write your code below ###############
+import math
+lcm = abs(a * b) // math.gcd(a, b)
+########### Write your code above ###############
+
+print(lcm)
