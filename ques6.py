@@ -1,8 +1,11 @@
 age = int(input("Enter your age: "))
-
-if age < 18:
-    print("Ticket price is $8")
+day = input("Enter the day: ")
 
 
-else:
-    print("Ticket price is $12")
+price = 12 if age >= 18 else 8
+
+if day=="Wednesday":
+    price -= 2
+
+
+print("Ticket price is:", price)
