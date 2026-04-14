@@ -9,3 +9,17 @@ while attempts < max_retires:
     time.sleep(wait_time)
     wait_time*=2
     attempts += 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
