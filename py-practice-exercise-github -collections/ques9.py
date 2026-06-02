@@ -19,6 +19,14 @@
 
 # findin min/max in a list
 
-lst = [45, 69, 72, 8, 0, 29]
+# lst = [45, 69, 72, 8, 0, 29]
 
-print(max(lst), min(lst))
+# print(max(lst), min(lst))
+
+# removing duplicates
+
+data = [1, 2, 2, 3, 4, 4, 4, 5]
+
+unique_lst = list(set(data))
+
+print(unique_lst)
