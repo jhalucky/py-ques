@@ -5,15 +5,20 @@
 
 # count no of vowels in a sentence
 
-vowels = 'aeiou'
+# vowels = 'aeiou'
 
-str = "Priyanshi study hard and get a job and start feeding me"
+# str = "Priyanshi study hard and get a job and start feeding me"
 
-counter = 0
+# counter = 0
 
-for i in str.lower():
-    if i in vowels:
-        counter += 1 
+# for i in str.lower():
+#     if i in vowels:
+#         counter += 1 
 
-print(counter)
+# print(counter)
 
+# findin min/max in a list
+
+lst = [45, 69, 72, 8, 0, 29]
+
+print(max(lst), min(lst))
