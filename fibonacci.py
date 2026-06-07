@@ -16,25 +16,25 @@
 #             b = c
 #             print(c)
 
-# fib(10)
+# fib(15)
 
-# def fibonacci(n):
-#     a,b = 0,1
+def fibonacci(n):
+    a,b = 0,1
 
-#     if n == 1:
-#         print(a)
+    if n == 1:
+        print(a)
 
-#     else:
+    else:
 
-#         print(a,end=' ')
-#         print(b,end=' ')
-#         for i in range(2,n):
-#             c = a + b
-#             a = b
-#             b = c
-#             print(c,end=' ')
+        print(a,end=' ')
+        print(b,end=' ')
+        for i in range(2,n):
+            c = a + b
+            a = b
+            b = c
+            print(c,end=' ')
 
-# fibonacci(5)
+fibonacci(15)
 
 # n = int(input("Enter a num: "))
 # fact = 1
@@ -73,9 +73,9 @@
 
 # print(fact)
 
-i = 1
-n = int(input("Enter the number of terms: "))
+# i = 1
+# n = int(input("Enter the number of terms: "))
 
-while i <=n:
-    print("*" * i)
-    i += 1
+# while i <=n:
+#     print("*" * i)
+#     i += 1
