@@ -2,9 +2,6 @@
 # check if it is prime or not
 
 # def is_prime(num):
-
-#     primes= []
-
 #     if num <= 1:
 #         print("Not prime")
     
@@ -18,6 +15,22 @@
 # is_prime(20)
 
 # print alternate prime numbers
-list = [2,3,5,7,11,13,17,19]
+# list = [2,3,5,7,11,13,17,19]
 
-print(list[::1])
+# print(list[::1])
+
+primes = []
+
+for num in range(2, 21):
+    is_prime = True
+
+    for i in range(2, num):
+        if num % i == 0:
+            is_prime = False
+            break
+
+    if is_prime:
+        primes.append(num)
+
+for i in primes[::2]:
+    print(i)        
