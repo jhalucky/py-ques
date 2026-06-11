@@ -8,5 +8,7 @@ def generate_list():
 
     # return even_nums
 
+    return list(range(4,30,2)) #use list as a function
+
 
 print(generate_list())
