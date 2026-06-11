@@ -1,11 +1,16 @@
 def is_even(num):
 
     """this function checks whether the number is even or not"""
-
-    if num % 2 == 0:
-        return 'even'
+    if type(num) == int:
+        if num % 2 == 0:
+            return 'even'
+        else:
+            return 'odd'
+        
     else:
-        return 'odd'
+        return 'Abe chutiye!'
+    
+print(is_even('hello'))
     
 
 n = int(input("Enter any number: "))
