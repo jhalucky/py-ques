@@ -1,5 +1,12 @@
 original_list = [1,2,3,4,5,6,7,8]
+# list comprehension
+# squared_list = [i*i for i in original_list]
 
-squared_list = [i*i for i in original_list]
+# using loop
 
+squared_list = []
+
+for i in original_list:
+    i*=i
+    squared_list.append(i)
 print(squared_list)
