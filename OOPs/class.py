@@ -45,15 +45,24 @@ class Atm:
 
 
     def change_pin(self):
+        # if self.pin == "":
+        #     print("Create a pin first!")
+        #     return 
+            
         existing_pin = input("Enter existing pin: ")
 
-        if existing_pin == self.pin:
-            new_pin = input("Enter new pin: ")
-            self.pin = new_pin
-            print('Pin changed successfully!')
+        # if existing_pin == self.pin:
+        new_pin = input("Enter new pin: ")
+        confirm_pin = input("confirm new pin: ")
 
+        if new_pin == confirm_pin:
+           self.pin = new_pin   
+           print('Pin changed successfully!')
         else:
-            print("Existing pin doesn't match!")
+           print("PIN configuration failed")
+
+        # else:
+        #     print("Existing pin doesn't match!")
 
 
 
