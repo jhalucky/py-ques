@@ -23,11 +23,11 @@ class Atm:
             self.create_pin()
         elif user_input == '2':
             self.change_pin()
-        elif user_input == 3:
+        elif user_input == '3':
             pass
-        elif user_input == 4:
+        elif user_input == '4':
             pass
-        elif user_input == 5:
+        elif user_input == '5':
             pass
 
 
@@ -37,6 +37,7 @@ class Atm:
         self.pin = confirmed_pin
 
         if confirmed_pin == user_pin:
+            self.pin = user_pin
             print("Pin created Successfully!")
 
         else:
@@ -45,24 +46,24 @@ class Atm:
 
 
     def change_pin(self):
-        # if self.pin == "":
-        #     print("Create a pin first!")
-        #     return 
+        if self.pin == "":
+            print("Create a pin first!")
+            return 
             
         existing_pin = input("Enter existing pin: ")
 
-        # if existing_pin == self.pin:
-        new_pin = input("Enter new pin: ")
-        confirm_pin = input("confirm new pin: ")
+        if existing_pin == self.pin:
+            new_pin = input("Enter new pin: ")
+            confirm_pin = input("confirm new pin: ")
 
-        if new_pin == confirm_pin:
-           self.pin = new_pin   
-           print('Pin changed successfully!')
+            if new_pin == confirm_pin:
+                self.pin = new_pin   
+                print('Pin changed successfully!')
+            else:
+                print("PIN configuration failed")
+
         else:
-           print("PIN configuration failed")
-
-        # else:
-        #     print("Existing pin doesn't match!")
+            print("Existing pin doesn't match!")
 
 
 
