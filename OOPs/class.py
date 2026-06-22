@@ -2,12 +2,15 @@ class Atm:
 
     def __init__(self):
         self.pin = ''
-        self.balance = 0
+        self.balance = 1024356
         self.menu()
 
 
     def menu(self):
-        user_input = input(
+
+        while True: 
+
+            user_input = input(
             """"
             Hey man! how may i help you?
             1. Press 1 to Create Pin
@@ -19,22 +22,21 @@ class Atm:
         )
 
 
-        if user_input == '1':
-            self.create_pin()
-        elif user_input == '2':
-            self.change_pin()
-        elif user_input == '3':
-            pass
-        elif user_input == '4':
-            pass
-        elif user_input == '5':
-            pass
+            if user_input == '1':
+                self.create_pin()
+            elif user_input == '2':
+                self.change_pin()
+            elif user_input == '3':
+                self.check_balance()
+            elif user_input == '4':
+                self.withdraw_cash()
+           
 
 
     def create_pin(self):
         user_pin = input("Enter 6 digits to create a pin: ")
         confirmed_pin = input("Enter pin again: ")
-        self.pin = confirmed_pin
+        
 
         if confirmed_pin == user_pin:
             self.pin = user_pin
@@ -65,6 +67,31 @@ class Atm:
         else:
             print("Existing pin doesn't match!")
 
+
+
+    def check_balance(self):
+        if self.pin == "":
+            print("Create a pin first!")
+            return self.create_pin()
+
+        existing_pin = input("Enter pin: ")
+
+        if existing_pin == self.pin:
+            print(f"Your balance is: {self.balance}")
+        else:
+            print("Invalid pin!")
+   
+
+    def withdraw_cash(self):
+        pin = input("Enter your pin: ")
+        if pin == self.pin:
+            amount = int(input("Enter amount to withdraw: "))
+            print("Receive Cash From Below!")
+            balance_left = self.balance - amount
+            print(f"Balance Left in: {balance_left}")
+
+        else:
+            print("Incorrect Pin!")
 
 
 obj = Atm()
