@@ -15,6 +15,12 @@ class Fraction:
         new_num = self.numerator*other.denominator - other.numerator*self.denominator
         new_den = self.denominator*other.denominator
         return '{}/{}'.format(new_num, new_den) 
+
+
+    def __mul__(self, other):
+        new_num = self.numerator*other.numerator
+        new_den = self.denominator*other.denominator
+        return '{}/{}'.format(new_num, new_den)
     
     def __str__(self):
         return '{}/{}'.format(self.numerator,self.denominator) # "{self.numerator}/{self.denominator} will also work but it will not give the output in the form of fraction, it will give the output in the form of string"
