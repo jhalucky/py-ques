@@ -3,7 +3,7 @@ class Fraction:
     def __init__(self,num,den): #parameterized constructor
         self.numerator = num
         self.denominator = den
-        
+        self.convert_to_decimal()
     
 
     def __add__(self, other):
@@ -28,6 +28,13 @@ class Fraction:
         new_den = self.denominator*other.numerator
         return '{}/{}'.format(new_num, new_den)
     
+
+    
+    def convert_to_decimal(self):
+        return self.numerator/self.denominator
+    
+
+
     def __str__(self):
         return '{}/{}'.format(self.numerator,self.denominator) # "{self.numerator}/{self.denominator} will also work but it will not give the output in the form of fraction, it will give the output in the form of string"
     
@@ -39,9 +46,10 @@ class Fraction:
 
 
 
-obj1 = Fraction(2,9)
+obj1 = Fraction(2,1)
 print(type(obj1))
-obj2 = Fraction(3,9)
+obj2 = Fraction(3,1)
+print(obj1.convert_to_decimal())
 print(obj1, obj2)
 print(obj1 + obj2)
 print(obj1 - obj2)
