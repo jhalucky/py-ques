@@ -22,6 +22,12 @@ class Fraction:
         new_den = self.denominator*other.denominator
         return '{}/{}'.format(new_num, new_den)
     
+
+    def __truediv__(self, other):
+        new_num = self.numerator*other.denominator
+        new_den = self.denominator*other.numerator
+        return '{}/{}'.format(new_num, new_den)
+    
     def __str__(self):
         return '{}/{}'.format(self.numerator,self.denominator) # "{self.numerator}/{self.denominator} will also work but it will not give the output in the form of fraction, it will give the output in the form of string"
     
@@ -39,3 +45,5 @@ obj2 = Fraction(3,9)
 print(obj1, obj2)
 print(obj1 + obj2)
 print(obj1 - obj2)
+print(obj1 * obj2)
+print(obj1 / obj2)
