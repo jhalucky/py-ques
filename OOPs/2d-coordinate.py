@@ -33,7 +33,13 @@ class Coordinate:
         return distance
         
 
-
+    def distance(cls, obj1, obj2):
+        x1 = obj1.x
+        x2 = obj2.x
+        y1 = obj1.y
+        y2 = obj2.y
+        distance = ((x2-x1)**2 + (y2-y1)**2)**(1/2)
+        return distance
 
 
 
