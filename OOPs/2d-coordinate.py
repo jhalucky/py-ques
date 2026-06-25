@@ -16,7 +16,7 @@ class Coordinate:
         y2 = other.y
         return f"coord1: ({self.x},{self.y}), coord2: ({other.x}, {other.y})"
     
-    def distance(self, other):
+    def euclidean_distance(self, other):
         x1 = self.x
         x2 = other.x
         y1 = self.y
@@ -29,10 +29,10 @@ class Coordinate:
         y1 = 0
         x2 = self.x
         y2 = self.y
-        distance = ((x2-x1)**2 + (y2-y1)**2)**(1/2)
+        distance = ((x2-x1)**2 + (y2-y1)**2)**(1/2) 
         return distance
         
-
+    @classmethod
     def distance(cls, obj1, obj2):
         x1 = obj1.x
         x2 = obj2.x
@@ -40,13 +40,26 @@ class Coordinate:
         y2 = obj2.y
         distance = ((x2-x1)**2 + (y2-y1)**2)**(1/2)
         return distance
+    
+    def is_point_on_line(obj1, obj2, p):
+        x1 = obj1.x
+        x2 = obj2.x
+        y1 = obj2.y
+        y2 = obj2.y
+        x = p.x
+        y = p.y 
+
+        cross_prod = (x-x1)*(y2-y1)-(x2-x1)*(y-y1)
+        epsilon = 1e-9
+
+        return abs(cross_prod) < epsilon
+            
 
 
 
-obj1 = Coordinate(1,2)
-obj2 = Coordinate(0,0)
-print(type(obj1))
-distance1 = Coordinate.distance(obj1, obj2)
-distance2 = Coordinate.distance_from_origin(obj1)
-print(obj1, obj2)
-print(distance1, distance2)
+
+
+obj1 = Coordinate(0,0)
+obj2 = Coordinate(2,2)
+p = Coordinate(2,3)
+print(f"Point (2,4) lies on line: {Coordinate.is_point_on_line(obj1, obj2, p)}")
