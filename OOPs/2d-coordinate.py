@@ -54,12 +54,30 @@ class Coordinate:
 
         return abs(cross_prod) < epsilon
             
+class Line:
+
+    def __init__(self,A,B,C):
+        self.A = A
+        self.B = B
+        self.C = C
+
+    def __str__(self):
+        return '{}x + {}y + {} = 0'.format(self.A, self.B, self.C)
+
+
+    def shortest_distance(line, point):
+        return abs(line.A*point.x + line.B*point.y + line.C)/(line.A**2 + line.B**2)**1/2
 
 
 
 
+# obj1 = Coordinate(0,0)
+# obj2 = Coordinate(2,2)
+# p = Coordinate(2,3)
+# print(f"Point (2,4) lies on line: {Coordinate.is_point_on_line(obj1, obj2, p)}")
 
-obj1 = Coordinate(0,0)
-obj2 = Coordinate(2,2)
-p = Coordinate(2,3)
-print(f"Point (2,4) lies on line: {Coordinate.is_point_on_line(obj1, obj2, p)}")
+
+l1 = Line(1,2,-3)
+p1 = Coordinate(1,10)
+
+print(l1.shortest_distance(p1))
