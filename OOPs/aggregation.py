@@ -58,3 +58,7 @@ add1.edit_address('E-117, Harkesh Nagar, Okhla Phase-2, Okhla Industrial Estate'
 cust1.edit_profile('Aryan Jha', add1)
 print(f"Customer 1:\n{cust1}")
 print(f"Customer 2:\n{cust2}")
+
+add1.edit_address('B-7, Saurabh Vihar, Jaitpur','Near Luv Kush Sweets','New Delhi',110021,'Delhi')
+cust1.edit_profile('Lucky Jha', add1)
+print(f"Customer 1:\n{cust1}")
