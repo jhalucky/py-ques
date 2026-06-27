@@ -24,27 +24,49 @@
 # s.enroll()
 
 
+# class Parent:
+
+#     def __init__(self, num):
+#         self.__num = num
+
+#     def get_num(self):
+#         return self.__num
+    
+
+# class Child(Parent):
+
+#     def __init__(self, num, val):
+#         super().__init__(num)
+#         self.__val = val
+
+#     def get_val(self):
+#         return self.__val
+
+
+# c = Child(100,200)
+# print(c.get_num())
+# print(c.get_val())
+
+
+
 class Parent:
 
-    def __init__(self, num):
-        self.__num = num
+    def __init__(self):
+        self.num = 100
 
-    def get_num(self):
-        return self.__num
-    
 
 class Child(Parent):
 
-    def __init__(self, num, val):
-        super().__init__(num)
-        self.__val = val
+    def __init__(self):
+        super().__init__()
+        self.val = 200
 
-    def get_val(self):
-        return self.__val
+    def show(self):
+        print(self.num)
+        print(self.val)
 
 
-c = Child(100,200)
-print(c.get_num())
-print(c.get_val())
+son = Child()
+son.show()
 
 
