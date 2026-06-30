@@ -20,11 +20,28 @@ class MobileApp(BankApp):
 
     def security(self):
         return super().security()
+    
+
+
+
+class WebApp(BankApp):
+
+    def web_login(self):
+        print("Login on website!")
+
+
+    def security(self):
+        return super().security()
+
+    
 
 
 
 obj1 = MobileApp()
+obj2 = WebApp()
 obj1.database()
 obj1.security()
 obj1.database()
 obj1.mobile_login()
+
+obj2.security()
