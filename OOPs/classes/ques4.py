@@ -6,13 +6,16 @@ class Flashcard:
         fruit, color = random.choice(list(dict.items()))
         self.fruit = fruit
         self.color = color
-
+        print("Welcome to the Rapid Fire!")
+        self.answer = input(f"What is the color of the {self.fruit}?\n")
+        
+        
         
 
 
-    def display(self):
-        print("Welcome to the Rapid Fire!")
-        answer = input(f"What is the color of the {self.fruit}?")
+    # def display(self):
+    #     # print("Welcome to the Rapid Fire!")
+        answer = self.answer
 
         if answer.lower() == self.color.lower():
             print("Correct!")
@@ -23,7 +26,7 @@ class Flashcard:
         wanna_play = int(input("Enter 0 if you want to play again: "))
 
         if wanna_play == 0:
-            self.display()
+            self.__init__(dict)
 
 
 
@@ -37,4 +40,5 @@ fruits = {
     "Blueberry": "Blue"
 }
 card1 = Flashcard(fruits)
-card1.display()
+card1
+# card1.display()
