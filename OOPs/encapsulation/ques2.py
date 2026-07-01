@@ -25,12 +25,12 @@ class Deck:
                 self.cards.append(Card(suit, value)) #and therefore it results in 52 pairs of suit, value or in short 52 cards. 
 
 
-        random.shuffle(self.cards)
+        random.shuffle(self.cards) #shuffling the cards
 
     def deal(self):
         if len(self.cards) == 0:
             return "No cards Left"
-        return self.cards.pop()
+        return self.cards.pop() #pops out a last card from self.cards[] and returns it 
     
 
     def __str__(self):
@@ -41,8 +41,9 @@ class Deck:
 
 
 deck = Deck()
-# print(deck)
+# print(deck) here if we print deck it will show 52 cards every time
     
 
 card = deck.deal()
 print(card)
+print(deck) # and here it will show remaining number of cards remaining in the list after popping out the last card
