@@ -6,9 +6,17 @@ class Student:
         self.__marks = marks
         self.__age = age
 
+
+    def get_marks(self):
+        return self.__marks
+    
+    def get_age(self):
+        return self.__age
+
     def validate_marks(self):
 
-        if self.__marks < 0 or self.__marks > 100:
+        # if self.__marks < 0 or self.__marks > 100: we can use this way also
+        if self.get_marks() < 0 or self.get_marks() > 100:  #using getter method
             return False
         
         else:
@@ -17,7 +25,8 @@ class Student:
 
     def validate_age(self):
 
-        if self.__age > 20:
+        # if self.__age > 20:
+        if self.get_age() > 20:
             return True
         
         else:
@@ -28,7 +37,7 @@ class Student:
     def check_qualifications(self):
 
        if self.validate_marks() and self.validate_age():
-           if self.__marks >= 65:
+           if self.get_marks() >= 65:
                return True
            
            else:
@@ -42,7 +51,7 @@ class Student:
 
     def display(self):
             
-        return f"Student Id: {self.__student_id}\nMarks: {self.__marks}\nAge: {self.__age}\nQualified: {self.check_qualifications()} "
+        return f"Student Id: {self.__student_id}\nMarks: {self.get_marks()}\nAge: {self.get_age()}\nQualified: {self.check_qualifications()} "
 
        
         
