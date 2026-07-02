@@ -22,7 +22,7 @@ class Student:
         
         else:
             return False
-        
+    
 
     
     def check_qualifications(self):
@@ -37,6 +37,12 @@ class Student:
 
        else:
            return False
+       
+
+
+    def display(self):
+            
+        return f"Student Id: {self.__student_id}\nMarks: {self.__marks}\nAge: {self.__age}\nQualified: {self.check_qualifications()} "
 
        
         
@@ -48,14 +54,23 @@ class Student:
 
 
 
-stu1 = Student(23456789, 25, 20)
-stu2 = Student(29876450, 65, 21 )
-print(stu1. validate_marks())
-print(stu1.validate_age())
-print(stu1.check_qualifications())
+stu1 = Student(23474500, 25, 20)
+stu2 = Student(29874501, 65, 21)
+stu3 = Student(29874502, 25, 22)
+stu4 = Student(29874503, 95, 18)
+stu5 = Student(29874504, 55, 25)
+
+# print(stu1. validate_marks())
+# print(stu1.validate_age())
+# print(f"Candiadte Report: {stu1.check_qualifications()}")
 
 
 
-print(stu2. validate_marks())
-print(stu2.validate_age())
-print(stu2.check_qualifications())
+# print(stu2. validate_marks())
+# print(stu2.validate_age())
+# print(f"Candidate Report: {stu2.check_qualifications()}")
+print(stu1.display())
+print(stu2.display())
+print(stu3.display())
+print(stu4.display())
+print(stu5.display())
